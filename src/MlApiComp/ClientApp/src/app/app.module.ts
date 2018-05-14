@@ -20,6 +20,7 @@ import { GoogleImageService } from './services/google-image.service';
 import { MlComponent } from './ml/ml.component'
 import { MlService } from './services/ml.service';
 import { MlDemoComponent } from './ml-demo/ml-demo.component';
+import { DataBindingTestComponent } from './data-binding-test/data-binding-test.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MlDemoComponent } from './ml-demo/ml-demo.component';
     HomeComponent,
     ExperimentComponent,
     MlComponent,
-    MlDemoComponent
+    MlDemoComponent,
+    DataBindingTestComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -42,7 +44,8 @@ import { MlDemoComponent } from './ml-demo/ml-demo.component';
       { path: 'experiments/create', component: ExperimentComponent, pathMatch: 'full' },
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'imgAnalysis', component: MlComponent, pathMatch: 'full' },
-      { path: 'demo-ml', component: MlDemoComponent, pathMatch: 'full' }
+      { path: 'demo-ml', component: MlDemoComponent, pathMatch: 'full' },
+      { path: 'data-binding-test', component: DataBindingTestComponent, pathMatch: 'full' }
     ])
   ],
   providers: [
