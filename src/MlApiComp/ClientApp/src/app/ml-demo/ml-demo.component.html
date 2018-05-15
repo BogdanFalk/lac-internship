@@ -1,27 +1,54 @@
 
 <div class="message">
-  <input type="file" (change)="onFileSelected($event)" />
+  <input type="file" multiple (change)="onFileSelected($event)" />
   {{status}}
-  <img src="{{image}}" />
-  <img src="{{image}}" />
-  <img src="{{image}}" />
+  <img src="{{image}}"  />
+  <img src="{{image1}}"  />
+  <img src="{{image2}}" />
   <div *ngIf="selectedFile">
     <div>
       <button (click)="onCallApi()">Call API ML</button>
     </div>
-    <div *ngIf="googleResponse">
-      <h2>Google response</h2>
+    <div *ngIf="googleResponseFile">
+      <h2>Google response File 1</h2>
       <p>
-        {{googleResponse}}
+        {{googleResponseFile}}
       </p>
     </div>
-    <div *ngIf="azureResponse">
-      <h2>Azure response</h2>
+    <div *ngIf="azureResponseFile">
+      <h2>Azure response File 1</h2>
       <p>
-        {{azureResponse}}
+        {{azureResponseFile}}
+      </p>
+    </div>
+
+    <div *ngIf="googleResponseFile1">
+      <h2>Google response File 2</h2>
+      <p>
+        {{googleResponseFile1}}
+      </p>
+    </div>
+    <div *ngIf="azureResponseFile1">
+      <h2>Azure response File 2</h2>
+      <p>
+        {{azureResponseFile1}}
+      </p>
+    </div>
+
+    <div *ngIf="googleResponseFile2">
+      <h2>Google response File 3</h2>
+      <p>
+        {{googleResponseFile2}}
+      </p>
+    </div>
+    <div *ngIf="azureResponseFile2">
+      <h2>Azure response File 3</h2>
+      <p>
+        {{azureResponseFile2}}
       </p>
     </div>
   </div>
+
   <div *ngFor="let item of demoList">
     <p>{{item}}</p>
   </div>
