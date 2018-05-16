@@ -33,6 +33,7 @@ export class MlDemoComponent implements OnInit {
 
     this.demoList = new Array<string>();
 
+    this.demoList = new Array<string>();
 
     
   }
